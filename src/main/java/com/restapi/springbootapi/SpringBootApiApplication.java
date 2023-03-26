@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @SpringBootApplication
-@RestController
+//@RestController
 public class SpringBootApiApplication {
 
 
@@ -17,19 +17,19 @@ public class SpringBootApiApplication {
 		SpringApplication.run(SpringBootApiApplication.class, args);
 	}
 
-	@GetMapping("/greet")
-	public GreetResponse greet() {
-		return new GreetResponse(
-				"Hello World !",
-				List.of("Java", "Javascript", "Swift"),
-				new Person("Mertcan", 23, true, 30_000)
-				);
-	}
-
-	record Person(String name, int age, boolean isAdult, double savings) {}
-
-	record GreetResponse(
-			String greet,
-			List<String> favProgrammingLanguage,
-			Person person) {}
+//	@GetMapping("/greet")
+//	public GreetResponse greet() {
+//		return new GreetResponse(
+//				"Hello World !",
+//				List.of("Java", "Javascript", "Swift"),
+//				new Person("Mertcan", 23, true, 30_000)
+//				);
+//	}
+//
+//	record Person(String name, int age, boolean isAdult, double savings) {}
+//
+//	record GreetResponse(
+//			String greet,
+//			List<String> favProgrammingLanguage,
+//			Person person) {}
 }
